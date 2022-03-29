@@ -1,5 +1,5 @@
 """
- * Reto #0
+ * Reto #0 - RESUELTO
  * EL FAMOSO "FIZZ BUZZ"
  * Fecha publicación enunciado: 27/12/21
  * Fecha publicación resolución: 03/01/22
