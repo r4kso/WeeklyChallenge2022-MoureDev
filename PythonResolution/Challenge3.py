@@ -14,7 +14,8 @@
  * - Revisaré el ejercicio en directo desde Twitch el lunes siguiente al de su publicación.
  * - Subiré una posible solución al ejercicio el lunes siguiente al de su publicación.
  """
-for i in range(2, 100):
+##################### LOGIC #########################
+for i in range(2, 100 + 1):     # Nos saltamos el 1, dado que por convenio no es primo
     prime = True
     for j in range(2, i):
         if i == j:

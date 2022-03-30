@@ -15,7 +15,7 @@
  * - Revisaré el ejercicio en directo desde Twitch el lunes siguiente al de su publicación.
  * - Subiré una posible solución al ejercicio el lunes siguiente al de su publicación.
 """
-
+##################### LOGIC #########################
 first = 0
 second = 1
 aux = 0

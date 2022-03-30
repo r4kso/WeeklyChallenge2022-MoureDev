@@ -16,7 +16,7 @@
  - Revisaré el ejercicio en directo desde Twitch el lunes siguiente al de su publicación.
  - Subiré una posible solución al ejercicio el lunes siguiente al de su publicación.
  """
-
+##################### LOGIC #########################
 def isAnAnagram(string1, string2):
     # Igualamos los dos strings
     string1.lower()
@@ -33,4 +33,20 @@ def isAnAnagram(string1, string2):
 
     return (string1.lower() == stringReversed)
 
+##################### TESTS #########################
 print(isAnAnagram("lana", "anal"))
+"""
+RESULTADOS:
+True
+
+Conclusion -> Correcto
+"""
+print("\nSiguiente test: \n")
+
+print(isAnAnagram("hola", "adios"))
+"""
+RESULTADOS:
+False
+
+Conclusion -> Correcto
+"""

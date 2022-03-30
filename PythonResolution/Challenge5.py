@@ -16,28 +16,53 @@
  * - Revisaré el ejercicio en directo desde Twitch el lunes siguiente al de su publicación.
  * - Subiré una posible solución al ejercicio el lunes siguiente al de su publicación.
 """
-import cv2           # Open source Computer Vision library. Recognize faces, identify objects...
+##################### IMPORTS & OTHERS #########################
+import PIL
+from PIL import Image
+import urllib.request
 import math
-import wget
 
-# Get Image
-wget.download('https://raw.githubusercontent.com/mouredev/mouredev/master/mouredev_github_profile.png')
+##################### LOGIC #########################
+url = "https://raw.githubusercontent.com/mouredev/mouredev/master/mouredev_github_profile.png"
 
-image = cv2.imread(r'C:\Users\franh\Documents\Desarrollo\WeeklyChallenge2022-MoureDev\PythonResolution\mouredev_github_profile.png')
-h, w, c = image.shape()     # Height, width, number of channels
-aspectRatio = ''
+def downloadImage(url):
+    filename = "image" + ".png"
+    urllib.request.urlretrieve(url, filename)
 
-if h == w:
-    aspectRatio = '1:1'
+def openImage(image):
+    img = PIL.Image.open(r"C:\Users\franh\Documents\Desarrollo\WeeklyChallenge2022-MoureDev\PythonResolution\image.png")
+    width, height = image.size()
+    return width, height
 
-if w < h:
-    temp = w
-    w = h
-    h = temp
+def calculation_GCF(width, height):
+    # Conversion to int
+    width_int=int(width)
+    heigth_int=int(height)     
+    #   ------------ ALGORITHM -----------
+    #   1. Find all factors of both numbers
+    factors_width= [i for i in range(1,width_int+1) if width_int%i==0]
+    factors_heigth= [i for i in range(1,heigth_int+1) if heigth_int%i==0]
+    print("[factors_width] = ", factors_width)
+    print("[factors_heigth] =", factors_heigth)
+    #   2. then find the ones that are common to both    
+    list_similar=[]
+    for item in factors_width:
+        if item in factors_heigth:
+            list_similar.append(item)
+    print("Similar" , list_similar)      
+    #   3. then choose the greatest.
+    max_list=max(list_similar)
+    print("GCF=", max_list)
+    return [width_int, heigth_int, max_list]
 
-divisor = math.gcd(w, h)    # Greatest Common Divisor
+def aspectRatio(width_int, heigth_int, max_list):
+    first=int(width_int/max_list)
+    second=int(heigth_int/max_list)   
+    
+    print("\n ******************************** RUN **********************************")
+    print("The ASPECT RATIO of the image of width", width, "px and heigth", heigth, "px is:    ",first,":",second)
 
-x = int(w / divisor) if not temp else int(h / divisor)
-y = int(h / divisor) if not temp else int (w / divisor)
-
-print(x + ':' + y)
+image_downloaded = downloadImage(url)
+openImage(image_downloaded)
+width, heigth = openImage(image_downloaded)
+aspect_ratio(*calculation_GCF(width,heigth)) 

@@ -14,11 +14,26 @@
  * - Revisaré el ejercicio en directo desde Twitch el lunes siguiente al de su publicación.
  * - Subiré una posible solución al ejercicio el lunes siguiente al de su publicación.
  """
-string = "something"
-i = len(string)
-result = ''
-while i > 0:
-    result = result + string[i-1]
-    i = i - 1
+##################### LOGIC #########################
+def invert(string):
+    print(string[::-1])
 
-print(result)
+##################### TESTS #########################
+invert("hola")
+"""
+RESULTADOS:
+aloh
+
+Conclusion -> Correcto
+"""
+
+print("\nSiguiente test: \n")
+
+invert("ashbdhjag")
+"""
+RESULTADOS:
+gajhdbhsa
+
+Conclusion -> Correcto
+"""
+

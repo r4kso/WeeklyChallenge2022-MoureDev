@@ -1,6 +1,6 @@
 """
-* Reto #7
- * CONTANDO PALABRAS - NO RESUELTO
+* Reto #7 - RESUELTO
+ * CONTANDO PALABRAS
  * Fecha publicación enunciado: 14/02/22
  * Fecha publicación resolución: 21/02/22
  * Dificultad: MEDIA
@@ -16,14 +16,58 @@
  * - Revisaré el ejercicio en directo desde Twitch el lunes siguiente al de su publicación.
  * - Subiré una posible solución al ejercicio el lunes siguiente al de su publicación.
 """
+##################### LOGIC #########################
+def wordCleaner(text):
+    puncChars = [".", ",", ":", ";", "!", "¡", "?", "¿", "(", ")", "{", "}", "[", "]", "-"]
+    newString = ""
 
-string = "La verdad es que no se lo que hablas pero esta es la verdad que hablas"
-stringList = string.lower().split(' ')
+    for i in text:
+        if i in puncChars:
+            i = ""
 
-resultList = [' ']
-counterList = [' ']
-for i in range(1, len(stringList) + 1):
-    if stringList[i] in resultList:
-        continue
-    else:
-        counterList = counterList.append('\n' + stringList[i] + ': 1')
+        newString += i
+
+    return newString.lower().split()
+
+def wordCounter(text):
+    wordList = wordCleaner(text)
+    counter = {}
+
+    for i in wordList:
+        if i not in counter:
+            counter[i] = 1
+        else:
+            counter[i] += 1
+
+    for i in counter:
+        print(f"{i}: {counter[i]}")
+
+##################### TESTS #########################
+wordCounter("Esto esto no se se si funcionará funcionará funcionara")
+"""
+RESULTADOS:
+esto: 2
+no: 1
+se: 2
+si: 1
+funcionará: 2
+funcionara: 1
+
+Conclusion -> Correcto
+"""
+
+print("\nSiguiente test: \n")
+
+wordCounter("La . . verdad es que no lo se se se se se")
+"""
+RESULTADOS:
+la: 1
+verdad: 1
+es: 1
+que: 1
+no: 1
+lo: 1
+se: 5
+
+Conclusion -> Correcto
+"""

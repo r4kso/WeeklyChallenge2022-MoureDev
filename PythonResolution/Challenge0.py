@@ -17,6 +17,7 @@
  * - Subiré una posible solución al ejercicio el lunes siguiente al de su publicación.
  *
 """
+##################### LOGIC #########################
 CONSTANT = 1
 for i in range(1, 100 + CONSTANT):
 	if (i % 3 == 0) and (i % 5 == 0):

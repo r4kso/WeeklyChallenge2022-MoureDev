@@ -15,7 +15,8 @@
  * - Puedes hacer un Fork del repo y una Pull Request al repo original para que veamos tu solución aportada.
  * - Revisaré el ejercicio en directo desde Twitch el lunes siguiente al de su publicación.
  * - Subiré una posible solución al ejercicio el lunes siguiente al de su publicación.
- """
+"""
+##################### LOGIC #########################
 def calcArea(poligon, num1, num2):
     if poligon == "triangle":
         return (num1 * num2) / 2
@@ -24,4 +25,21 @@ def calcArea(poligon, num1, num2):
     else:
         return num1 * num2
 
+##################### TESTS #########################
 print(calcArea('triangle', 2, 2))
+"""
+RESULTADOS:
+2.0
+
+Conclusion -> Correcto
+"""
+
+print("\nSiguiente test: \n")
+
+print(calcArea("square", 2, 2))
+"""
+RESULTADOS:
+4
+
+Conclusion -> Correcto
+"""
