@@ -1,5 +1,5 @@
 """
- * Reto #2
+ * Reto #2 - RESUELTO
  * LA SUCESIÓN DE FIBONACCI
  * Fecha publicación enunciado: 10/01/22
  * Fecha publicación resolución: 17/01/22

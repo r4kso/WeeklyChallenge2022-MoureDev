@@ -1,5 +1,5 @@
 """
-* Reto #6
+* Reto #6 - RESUELTO
  * INVIRTIENDO CADENAS
  * Fecha publicación enunciado: 07/02/22
  * Fecha publicación resolución: 14/02/22

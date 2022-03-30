@@ -1,6 +1,6 @@
 """
 * Reto #7
- * CONTANDO PALABRAS
+ * CONTANDO PALABRAS - NO RESUELTO
  * Fecha publicación enunciado: 14/02/22
  * Fecha publicación resolución: 21/02/22
  * Dificultad: MEDIA
@@ -16,3 +16,14 @@
  * - Revisaré el ejercicio en directo desde Twitch el lunes siguiente al de su publicación.
  * - Subiré una posible solución al ejercicio el lunes siguiente al de su publicación.
 """
+
+string = "La verdad es que no se lo que hablas pero esta es la verdad que hablas"
+stringList = string.lower().split(' ')
+
+resultList = [' ']
+counterList = [' ']
+for i in range(1, len(stringList) + 1):
+    if stringList[i] in resultList:
+        continue
+    else:
+        counterList = counterList.append('\n' + stringList[i] + ': 1')
