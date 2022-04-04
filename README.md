@@ -3,7 +3,7 @@ This Weekly Challenge has been made by the spanish streamer [MoureDev](https://m
 All challenges has been written in spanish, therefore the comments will be written also in spanish.
 
 ## Original repository
-The original repository is [this one](https://github.com/mouredev/Weekly-Challenge-2022-Kotlin). Also made by MoureDev. I didn't forked because it was too messy for me (he solves the challenges in Swift and Kotlin and I only wanna use Python).
+The original repository is [this one](https://github.com/mouredev/Weekly-Challenge-2022-Kotlin) (Also made by MoureDev) I didn't forked because it was too messy for me (he solves the challenges in Swift and Kotlin and I only wanna use Python).
 
 ## [Video explaining the challenges](https://youtu.be/14v4IINunvY)
 
@@ -22,3 +22,5 @@ The original repository is [this one](https://github.com/mouredev/Weekly-Challen
 * **#11** - 14/03/22 - `ELIMINANDO CARACTERES` - RESUELTO
 * **#12** - 21/03/22 - `¿ES UN PALÍNDROMO?` - RESUELTO
 * **#13** - 28/03/22 - `FACTORIAL RECURSIVO` - RESUELTO
+* **#14** - 04/04/22 - `¿ES UN NÚMERO DE ARMSTRONG?` - PENDIENTE
+* **#15** - 11/04/22 - `???????`
